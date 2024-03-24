@@ -1,0 +1,75 @@
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$grayish-blue: hsla(216deg, 20%, 28%, 71%);
+
+.advice {
+    width: 450px;
+    padding: 30px 30px 40px;
+    border-radius: 15px;
+    background-color: $grayish-blue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    position: relative;
+
+    &-title {
+        text-align: center;
+        font-size: 16px;
+        color: $neon-green;
+        letter-spacing: 2px;
+    }
+
+    &-text {
+        font-size: 25px;
+        text-align: center;
+        color: $light-cyan;
+    }
+
+    &-divider {
+        width: 100%;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        width: max-content;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $neon-green;
+        cursor: pointer;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 0 15px 5px rgba(82, 255, 168, 0.5);
+        }
+
+        &-img {
+            width: 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .advice {
+        width: 90%;
+        padding: 50px 30px 60px;
+        grid-gap: 20px;
+
+        &-title {
+            font-size: 14px;
+        }
+
+        &-text {
+            font-size: 20px;
+        }
+    }
+}
